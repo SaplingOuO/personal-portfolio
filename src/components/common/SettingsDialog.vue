@@ -208,7 +208,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <el-dialog v-model="visible" title="網頁設定" width="380px" append-to-body class="custom-settings-dialog">
+  <el-dialog v-model="visible" title="網頁設定" style="--el-dialog-width: 90%; max-width: 380px" append-to-body class="custom-settings-dialog">
 
     <div class="settings-content">
       <p class="section-title">快速主題切換</p>

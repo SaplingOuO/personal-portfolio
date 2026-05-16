@@ -34,38 +34,32 @@ const openSettings = () => {
 </script>
 
 <template>
-  <!-- 點擊el-menu-item時觸發select將網址路徑改為所點選的項目
-       default-active綁定所選路徑的值，讓被選項目為高亮狀。
-  -->
-  <el-menu :default-active="router.currentRoute.value.path" class="navbar-menu hidden-xs-only" mode="horizontal"
-    :ellipsis="false" background-color="var(--bg-color)" text-color="var(--text-primary)"
-    active-text-color="var(--primary-color)" @select="handleSelect">
+  <el-menu 
+    :default-active="router.currentRoute.value.path" 
+    class="navbar-menu" 
+    mode="horizontal" 
+    :ellipsis="false"
+    background-color="var(--bg-color)" 
+    text-color="var(--text-primary)" 
+    active-text-color="var(--primary-color)"
+    @select="handleSelect"
+  >
     <div class="logo-container" @click="router.push('/')">
       <span class="logo-text">Sapling<span class="dot">.</span></span>
     </div>
 
     <div class="flex-grow"></div>
 
-    <el-menu-item index="/">首頁</el-menu-item>
-    <el-menu-item index="/projects">作品集</el-menu-item>
-    <el-menu-item index="/about">關於我</el-menu-item>
-    <el-menu-item index="OPEN_SETTINGS" class="setting-trigger">
+    <el-menu-item index="/" class="hidden-xs-only">首頁</el-menu-item>
+    <el-menu-item index="/projects" class="hidden-xs-only">作品集</el-menu-item>
+    <el-menu-item index="/about" class="hidden-xs-only">關於我</el-menu-item>
+    <el-menu-item index="OPEN_SETTINGS" class="setting-trigger hidden-xs-only">
       <el-icon style="font-size: 1.2rem; cursor: pointer; margin: 0px; ">
         <Setting />
       </el-icon>
     </el-menu-item>
-  </el-menu>
 
-
-  <el-menu :default-active="router.currentRoute.value.path" class="navbar-menu hidden-sm-and-up" mode="horizontal"
-    :ellipsis="false" background-color="var(--bg-color)" text-color="var(--text-primary)"
-    active-text-color="var(--primary-color)" @select="handleSelect">
-    <div class="logo-container" @click="router.push('/')">
-      <span class="logo-text">Sapling<span class="dot">.</span></span>
-    </div>
-
-    <div class="flex-grow"></div>
-    <el-sub-menu index="mobile-menu" popper-class="mobile-custom-popper">
+    <el-sub-menu index="mobile-menu" class="hidden-sm-and-up mobile-submenu-trigger" popper-class="mobile-custom-popper">
       <template #title>
         <span>導覽選單</span>
       </template>
@@ -78,9 +72,10 @@ const openSettings = () => {
         </el-icon>
       </el-menu-item>
     </el-sub-menu>
-  </el-menu>
-  <SettingsDialog ref="settingsControl" />
 
+  </el-menu>
+  
+  <SettingsDialog ref="settingsControl" />
 </template>
 
 <style scoped>
