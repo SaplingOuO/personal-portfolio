@@ -1,12 +1,24 @@
+<!-- 
+  參考網址：https://mcp.csdn.net/691547a75511483559e9d826.html
+  【Element Plus】解决移动设备使用 <el-menu> 和 <el-sub-menu> 时，子菜单需要点击两次才会隐藏的问题
+  问题原因： Element Plus 的 el-menu 在水平模式（mode="horizontal"）下，默认通过 hover 触发子菜单弹出。移动端没有 hover 事件，点击会先触发 “hover 态” 打开子菜单，第二次点击才会触发真正的点击事件（关闭子菜单），所以会出现需要两次点击才隐藏子菜单的问题。
+  解决办法： 在 <el-menu> 中加上 menu-trigger="click" ，将子菜单的触发方式改为通过点击事件触发。这样修改之后子菜单将点击一次打开，再次点击关闭，这样就成功修复了子菜单需要点击两次才会隐藏的问题，符合移动端交互习惯
+-->
+
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAppStore } from '@/stores/app'
 import SettingsDialog from './SettingsDialog.vue'
 
 const router = useRouter()
 const appStore = useAppStore()
-const menuRef = ref(null)
+const navItems = ref([
+  { name: '首頁', path: '/'},
+  { name: '作品集', path: '/projects'},
+  { name: '關於我', path: '/about'},
+  // { name: '設定', path: 'OPEN_SETTINGS'}
+])
 
 // 處理選單點擊跳轉
 const handleSelect = (key) => {
@@ -43,6 +55,7 @@ const openSettings = () => {
     text-color="var(--text-primary)" 
     active-text-color="var(--primary-color)"
     @select="handleSelect"
+    menu-trigger="click"
   >
     <div class="logo-container" @click="router.push('/')">
       <span class="logo-text">Sapling<span class="dot">.</span></span>
@@ -50,9 +63,17 @@ const openSettings = () => {
 
     <div class="flex-grow"></div>
 
-    <el-menu-item index="/" class="hidden-xs-only">首頁</el-menu-item>
+    <el-menu-item 
+      v-for="item in navItems"
+      :key="item.path"
+      :index="item.path"
+      class="hidden-xs-only"
+      >
+      {{ item.name }}
+    </el-menu-item>
+    <!-- <el-menu-item index="/" class="hidden-xs-only">首頁</el-menu-item>
     <el-menu-item index="/projects" class="hidden-xs-only">作品集</el-menu-item>
-    <el-menu-item index="/about" class="hidden-xs-only">關於我</el-menu-item>
+    <el-menu-item index="/about" class="hidden-xs-only">關於我</el-menu-item> -->
     <el-menu-item index="OPEN_SETTINGS" class="setting-trigger hidden-xs-only">
       <el-icon style="font-size: 1.2rem; cursor: pointer; margin: 0px; ">
         <Setting />
@@ -63,9 +84,16 @@ const openSettings = () => {
       <template #title>
         <span>導覽選單</span>
       </template>
-      <el-menu-item index="/">首頁</el-menu-item>
+      <el-menu-item 
+        v-for="item in navItems" 
+        :key="'mobile-' + item.path" 
+        :index="item.path"
+      >
+        {{ item.name }}
+      </el-menu-item>
+      <!-- <el-menu-item index="/">首頁</el-menu-item>
       <el-menu-item index="/projects">作品集</el-menu-item>
-      <el-menu-item index="/about">關於我</el-menu-item>
+      <el-menu-item index="/about">關於我</el-menu-item> -->
       <el-menu-item index="OPEN_SETTINGS" class="setting-trigger">
         <el-icon style="font-size: 1.2rem; cursor: pointer; margin: 0px; ">
           <Setting />
