@@ -10,17 +10,20 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/HomeView.vue')
+      component: () => import('../views/HomeView.vue'),
+      meta: { title: 'Sapling | 個人首頁' }
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/AboutView.vue'),
+      meta: { title: 'Sapling | 關於我' }
     },
     {
       path: '/projects',
       name: 'projects',
-      component: () => import('../views/ProjectsView.vue')
+      component: () => import('../views/ProjectsView.vue'),
+      meta: { title: 'Sapling | 作品集' }
     }
   ]
 })
