@@ -12,5 +12,5 @@ export default defineConfig({
     }
   },
   // 部署路徑
-  base: process.env.NODE_ENV === 'production' ? '/vite-myportfolio/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/personal-portfolio/' : '/',
 })

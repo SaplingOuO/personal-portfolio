@@ -9,5 +9,5 @@ git init
 git add -A
 git commit -m 'deploy'
 # 部署到 https://github.com/帳號名稱/專案名稱.git 分支為 gh-pages
-git push -f https://github.com/SaplingOuO/vite-myportfolio.git master:gh-pages
+git push -f https://github.com/SaplingOuO/personal-portfolio.git master:gh-pages
 cd -
