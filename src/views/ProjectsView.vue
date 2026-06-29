@@ -10,7 +10,7 @@ const projects = ref([
     category: 'Web',
     tech: ['Vue 2', 'Vue CLI', 'BootStrap 5', 'Dreamweaver'],
     desc: '自學Vue使用Vue CLI建立的網站，並使用Dreamweaver編輯器做為學習工具。',
-    link: 'https://saplingouo.github.io/AnimeRecordVue/',
+    link: 'https://saplingouo.github.io/portfolio-2023/',
     img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800'
   },
   {
@@ -19,7 +19,7 @@ const projects = ref([
     category: 'Web',
     tech: ['Vue 3', 'Vue CLI', 'BootStrap 5', 'Visual Studio Code'],
     desc: '將編輯器改為使用VS Code，並且學習Three.js、Python、GitHub...等技術。',
-    link: 'https://saplingouo.github.io/MyPortfolio/Home',
+    link: 'https://saplingouo.github.io/portfolio-2024/',
     img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800'
   },
   {
@@ -28,7 +28,7 @@ const projects = ref([
     category: 'Web',
     tech: ['Vue 3', 'Vite', 'BootStrap 5', 'GSAP', 'Three.js', 'Firebase'],
     desc: '建構工具更該為Vite，學習使用Firebase製作使用者登入並導入anilist API讓使用者查詢後加入最愛功能。',
-    link: 'https://saplingouo.github.io/myportfolio2025/',
+    link: 'https://saplingouo.github.io/portfolio-2025/',
     img: 'https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=800'
   },
   {
