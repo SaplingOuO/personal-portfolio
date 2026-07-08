@@ -39,6 +39,33 @@ const projects = ref([
     desc: '開發自動化爬蟲腳本，從ACG平台抓取最新動畫資訊。自動合併舊資料、按上映日期排序及圖片格式統一處理等功能。',
     link: 'https://github.com/SaplingOuO/acg-scraper-tool',
     img: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800'
+  },
+  {
+    id: 5,
+    title: '動漫紀錄庫-bootstrap5', 
+    category: 'Web',
+    tech: ['Vue 3', 'Webpack', 'Bootstrap 5'], 
+    desc: '採用 Webpack 搭配 Bootstrap 5 打造，建立應用初始架構，實作個人動漫紀錄與基礎響應式佈局。',
+    link: 'https://saplingouo.github.io/animerecord-bootstrap5/',
+    img: '你的專案截圖或 Unsplash 圖片'
+  },
+  {
+    id: 6,
+    title: '動漫紀錄庫-vite', 
+    category: 'Web',
+    tech: ['Vue 3', 'Vite 6', 'Pinia 3', 'Bootstrap 5', 'Tailwind CSS', 'Axios'], // 現代化技術棧
+    desc: '全面重構為 Vite 與 Pinia，串接線上即時 Jikan API，並實作空陣列容錯機制以防網頁崩潰。',
+    link: 'https://saplingouo.github.io/animerecord-vite/#/Home',
+    img: '你的專案截圖或 Unsplash 圖片'
+  },
+  {
+    id: 7,
+    title: '動漫紀錄庫-gsap', 
+    category: 'Web',
+    tech: ['Vue 3', 'Vite', 'GSAP 3', 'Three.js', 'YouTube API', 'Axios'], // 動態特效與多媒體
+    desc: '實驗 GSAP 物理吸附與拉動特效，整合 YouTube API 並設計台灣區域鎖定之影音自動降級防禦機制。',
+    link: 'https://saplingouo.github.io/animerecord-gsap/',
+    img: '你的專案截圖或 Unsplash 圖片'
   }
 ])
 
