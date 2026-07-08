@@ -11,7 +11,7 @@ const projects = ref([
     tech: ['Vue 2', 'Vue CLI', 'BootStrap 5', 'Dreamweaver'],
     desc: '自學Vue使用Vue CLI建立的網站，並使用Dreamweaver編輯器做為學習工具。',
     link: 'https://saplingouo.github.io/portfolio-2023/',
-    img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800'
+    img: '../../public/image/portfolio-v1.23.gif'
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const projects = ref([
     tech: ['Vue 3', 'Vue CLI', 'BootStrap 5', 'Visual Studio Code'],
     desc: '將編輯器改為使用VS Code，並且學習Three.js、Python、GitHub...等技術。',
     link: 'https://saplingouo.github.io/portfolio-2024/',
-    img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800'
+    img: '../../public/image/portfolio-v1.24.gif'
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const projects = ref([
     tech: ['Vue 3', 'Vite', 'BootStrap 5', 'GSAP', 'Three.js', 'Firebase'],
     desc: '建構工具更該為Vite，學習使用Firebase製作使用者登入並導入anilist API讓使用者查詢後加入最愛功能。',
     link: 'https://saplingouo.github.io/portfolio-2025/',
-    img: 'https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=800'
+    img: '../../public/image/portfolio-v1.25.gif'
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const projects = ref([
     tech: ['Python', 'Requests', 'BeautifulSoup', 'Regex', 'JSON'],
     desc: '開發自動化爬蟲腳本，從ACG平台抓取最新動畫資訊。自動合併舊資料、按上映日期排序及圖片格式統一處理等功能。',
     link: 'https://github.com/SaplingOuO/acg-scraper-tool',
-    img: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800'
+    img: '../../public/image/acg-scraper-tool.gif'
   },
   {
     id: 5,
@@ -47,25 +47,25 @@ const projects = ref([
     tech: ['Vue 3', 'Webpack', 'Bootstrap 5'], 
     desc: '採用 Webpack 搭配 Bootstrap 5 打造，建立應用初始架構，實作個人動漫紀錄與基礎響應式佈局。',
     link: 'https://saplingouo.github.io/animerecord-bootstrap5/',
-    img: '你的專案截圖或 Unsplash 圖片'
+    img: '../../public/image/animerecord-bootstrap5.gif'
   },
   {
     id: 6,
     title: '動漫紀錄庫-vite', 
     category: 'Web',
-    tech: ['Vue 3', 'Vite 6', 'Pinia 3', 'Bootstrap 5', 'Tailwind CSS', 'Axios'], // 現代化技術棧
+    tech: ['Vue 3', 'Vite 6', 'Pinia 3', 'Bootstrap 5', 'Axios'],
     desc: '全面重構為 Vite 與 Pinia，串接線上即時 Jikan API，並實作空陣列容錯機制以防網頁崩潰。',
     link: 'https://saplingouo.github.io/animerecord-vite/#/Home',
-    img: '你的專案截圖或 Unsplash 圖片'
+    img: '../../public/image/animerecord-vite.gif'
   },
   {
     id: 7,
     title: '動漫紀錄庫-gsap', 
     category: 'Web',
-    tech: ['Vue 3', 'Vite', 'GSAP 3', 'Three.js', 'YouTube API', 'Axios'], // 動態特效與多媒體
+    tech: ['Vue 3', 'Vite', 'GSAP 3', 'Three.js', 'YouTube API', 'Axios'],
     desc: '實驗 GSAP 物理吸附與拉動特效，整合 YouTube API 並設計台灣區域鎖定之影音自動降級防禦機制。',
     link: 'https://saplingouo.github.io/animerecord-gsap/',
-    img: '你的專案截圖或 Unsplash 圖片'
+    img: '../../public/image/animerecord-gsap.png'
   }
 ])
 
