@@ -1,7 +1,5 @@
 # 🚀 My Portfolio 2026
 
-[作品預覽](https://saplingouo.github.io/vite-myportfolio/)
-
 這是一個基於 **Vue 3 (Composition API)** 開發的個人作品集網站。本專案不僅展示了我的前端開發技術，也實踐了動態視覺與模組化開發的思維。
 
 ## 🛠️ 技術棧 (Tech Stack)

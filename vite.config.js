@@ -15,6 +15,12 @@ import vue from '@vitejs/plugin-vue'
 //   base: process.env.NODE_ENV === 'production' ? '/personal-portfolio/' : '/',
 // })
 
+/* 
+  在 Vite 的世界裡，預設是「不支援」 process.env 的（那是舊版 Webpack / Vue CLI 在用的）。
+  當你在 GitHub Actions 執行打包（build）時，Vite 抓不到 process.env.NODE_ENV，它會變成 undefined。
+  這會導致三元運算子判定失敗，打包出來的 base 直接套用後面的 '/'，而不是你的 /personal-portfolio/。
+*/
+
 export default defineConfig(({ command }) => {
   return {
     plugins: [vue()],
